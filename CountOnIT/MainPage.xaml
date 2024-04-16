@@ -4,13 +4,7 @@
              x:Class="CountOnIT.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-    
-            <Label Text="hej"></Label>
-        </VerticalStackLayout>
+        
     </ScrollView>
 
 </ContentPage>
