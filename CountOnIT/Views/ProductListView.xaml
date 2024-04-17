@@ -3,7 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CountOnIT.Views.ProductListView">
     <VerticalStackLayout>
-        
+        <ScrollView Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
+                <Image Grid.Column="0" Source="ikon1.png"/>
+
+                <Image Grid.Column="1" Source="ikon2.png"/>
+            </Grid>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentView>
