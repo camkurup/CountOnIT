@@ -2,29 +2,93 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CountOnIT.Views.ProductListView">
-    <VerticalStackLayout>
-        <ScrollView Margin="20">
+     <ScrollView Margin="20">
+         <VerticalStackLayout>
+       
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
                     <RowDefinition />
-                    <RowDefinition Height="100" />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-      
-                <Image Grid.Row="0" Grid.Column="0" Source="{Binding ProductImageLink}" Background="Blue"/>
-           
-                <Image Grid.Row="1" Grid.Column="1" Source="ikon2.png" Background="Blue"/>
+                <Grid Grid.Row="0" Grid.Column="0" Margin="20">
+                    <StackLayout>
 
-                <Image Grid.Row="2" Grid.Column="0" Source="ikon1.png" Background="Blue"/>
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
 
-                <Image Grid.Row="3" Grid.Column="1" Source="ikon2.png" Background="Blue"/>
+                    </StackLayout>
 
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" Margin="20">
+                    <StackLayout>
+
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
+
+                    </StackLayout>
+
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" Margin="20">
+                    <StackLayout>
+
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
+
+                    </StackLayout>
+
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" Margin="20">
+                    <StackLayout>
+
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
+
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" Margin="20">
+                    <StackLayout>
+
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
+
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" Margin="20">
+                    <StackLayout>
+
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
+
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0" Margin="20">
+                    <StackLayout>
+
+                        <Image Source="ikon2.png"/>
+                        <Label Text="Produktnavn" Margin="10"/>
+                        <Button Text="Læg i kurv"/>
+
+                    </StackLayout>
+                </Grid>
             </Grid>
-        </ScrollView>
+        
     </VerticalStackLayout>
+    </ScrollView>
 </ContentView>
