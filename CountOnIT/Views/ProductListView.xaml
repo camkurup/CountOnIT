@@ -15,9 +15,15 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Column="0" Source="ikon1.png"/>
+      
+                <Image Grid.Row="0" Grid.Column="0" Source="{Binding ProductImageLink}" Background="Blue"/>
+           
+                <Image Grid.Row="1" Grid.Column="1" Source="ikon2.png" Background="Blue"/>
 
-                <Image Grid.Column="1" Source="ikon2.png"/>
+                <Image Grid.Row="2" Grid.Column="0" Source="ikon1.png" Background="Blue"/>
+
+                <Image Grid.Row="3" Grid.Column="1" Source="ikon2.png" Background="Blue"/>
+
             </Grid>
         </ScrollView>
     </VerticalStackLayout>

@@ -7,5 +7,6 @@ public partial class ProductListView : ContentView
 		InitializeComponent();
 	}
 
+
 	//Linke til logik
 }
