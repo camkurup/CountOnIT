@@ -1,3 +1,7 @@
+
+using CountOnIT.Models;
+using CountOnIT.ViewModels;
+
 namespace CountOnIT.Views;
 
 public partial class ProductListView : ContentView
@@ -7,6 +11,8 @@ public partial class ProductListView : ContentView
 		InitializeComponent();
 	}
 
-
-	//Linke til logik
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        
+    }
 }

@@ -26,7 +26,9 @@
 
                         <Image Source="ikon2.png"/>
                         <Label Text="Produktnavn" Margin="10"/>
-                        <Button Text="Læg i kurv"/>
+                        <Button 
+                            Text="Læg i kurv"                            
+                            Clicked="Button_Clicked"/>
 
                     </StackLayout>
 
@@ -55,7 +57,9 @@
                     <StackLayout>
 
                         <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
+                        <Label 
+                            Text="Produktnavn" 
+                            Margin="10"/>
                         <Button Text="Læg i kurv"/>
 
                     </StackLayout>
