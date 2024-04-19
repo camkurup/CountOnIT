@@ -4,6 +4,11 @@
              x:Class="CountOnIT.Views.UsagePage"
              xmlns:views="clr-namespace:CountOnIT.Views;assembly=CountOnIT">
 
-    <views:ProductListView/>
+    <StackLayout>
+        <!-- Knappen til at skifte mellem views -->
+        <Button Text="Skift View" Clicked="Button_Clicked" />
 
+        <!-- Placeholder til visning af views -->
+        <ContentView x:Name="ProductView" />
+    </StackLayout>
 </ContentPage>
