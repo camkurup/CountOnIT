@@ -7,13 +7,13 @@
     xmlns:views="clr-namespace:CountOnIT.Views">
 
     <TabBar>
-        <ShellContent Title="Forbrug"
+        <ShellContent Icon="usage.svg"
                      ContentTemplate="{DataTemplate views:UsagePage}" />
-        <ShellContent Title="Bestil"
+        <ShellContent Icon="shoppingbasket.svg"
                      ContentTemplate="{DataTemplate views:OrderingPage}" />
-        <ShellContent Title="Favoritter"
+        <ShellContent Icon="favorits.svg"
                      ContentTemplate="{DataTemplate views:FavoritsPage}" />
-        <ShellContent Title="Profil"
+        <ShellContent Icon="profile.svg"
                      ContentTemplate="{DataTemplate views:ProfilePage}" />
     </TabBar>
 </Shell>
