@@ -4,7 +4,7 @@
              x:Class="CountOnIT.Views.ProductListView">
      <ScrollView Margin="20">
          <VerticalStackLayout>
-       
+            <ContentView x:Name="ProductView"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -24,15 +24,17 @@
                 <Grid Grid.Row="0" Grid.Column="0" Margin="20">
                     <StackLayout>
 
-                        <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
+                        <Image Source="ikon2.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_Clicked" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Produktnavn" Margin="10"/> 
                         
                             <!-- Knappen til at skifte mellem views -->
                             <Button Text="Skift View" Clicked="Button_Clicked" />
 
-                            <!-- Placeholder til visning af views -->
-                            <ContentView x:Name="ProductView" />
-
+                           
                     </StackLayout>
 
                 </Grid>

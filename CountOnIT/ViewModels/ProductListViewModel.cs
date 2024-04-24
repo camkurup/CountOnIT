@@ -9,10 +9,7 @@ namespace CountOnIT.ViewModels
 {
     public class ProductListViewModel
     {
-        static void GoToProduct()
-        {
-            
-        }
+        
 
     }
 }
