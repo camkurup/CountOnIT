@@ -1,4 +1,7 @@
-﻿namespace CountOnIT
+﻿using Microsoft.EntityFrameworkCore;
+using static Android.Graphics.ImageDecoder;
+
+namespace CountOnIT
 {
     public partial class App : Application
     {
@@ -7,19 +10,25 @@
             InitializeComponent();
 
             MainPage = new AppShell();
+
+            
         }
 
-        //protected override Window CreateWindow(IActivationState activationState)
-        //{
-        //    var window = base.CreateWindow(activationState);
+        private void ConfigureServices()
+        {
+            var services = new ServiceCollection();
 
-        //    const int newWidth = 414;
-        //    const int newHeight = 896;
+            // Tilføj DbContext til tjenester
+            services.AddDbContext<MyDbContext>(options =>
+                options.UseSqlServer("Data Source = CKU - PC; Initial Catalog = CountOnIT; Integrated Security = True; Connect Timeout = 30; Encrypt = False; Trust Server Certificate = False; Application Intent = ReadWrite; Multi Subnet Failover = False"));
 
-        //    window.Width = newWidth;
-        //    window.Height = newHeight;
+            // Opret ServiceProvider
+            var serviceProvider = services.BuildServiceProvider();
 
-        //    return window;
-        //}
+            // Hent DbContext fra ServiceProvider
+            var dbContext = serviceProvider.GetRequiredService<MyDbContext>();
+
+            // Nu kan du bruge dbContext til at interagere med din database
+        }
     }
 }
