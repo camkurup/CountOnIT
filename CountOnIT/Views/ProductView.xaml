@@ -4,40 +4,57 @@
              x:Class="CountOnIT.Views.ProductView">
     <VerticalStackLayout>
 
-        
             <StackLayout Orientation="Horizontal">
 
             <Image Source="arrowleft.png"
                    HeightRequest="30"
-                   Margin="20,0,30,120"/>
+                   Margin="20,0,30,120">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Go_Back_tapped"/>
+                </Image.GestureRecognizers>
+                
+            </Image>
 
             <Image Source="ikon1.png"
                        Margin="20,0,70,0"
                        HeightRequest="200"/>
-                
-                <Image Source="shoppingbasket.svg"
+
+            <Image Source="shoppingbasket.svg"
                        Margin="0,-150,0,0"
-                       HeightRequest="30"/>
+                       HeightRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Go_To_Shoppingcart"/>
+                </Image.GestureRecognizers>
+            </Image>
             </StackLayout>
                 
 
         <StackLayout BackgroundColor="#f2f2f2">
+            
                 <Label Text="Produktnavn"
                        Margin="40,20,0,0"
                        FontSize="20"/>
+                
                 <Label Text="Antal på lager: 201stk."
                        Margin="40,40,0,0"/>
 
                 <HorizontalStackLayout Margin="40">
+                    
                     <Button Text="-"/>
+                    
                     <Label Text="0"
                            Margin="10"
                            FontSize="20"/>
+                    
                     <Button Text="+"/>
+                    
                 </HorizontalStackLayout>
+                
                 <Button Text="Læg i Kurv"
                         Margin="40,10,200,0"/>
+                
             <Label Text="Detaljer  V" Margin="40,60,0,5000"/>
+                
         </StackLayout>
 
     </VerticalStackLayout>

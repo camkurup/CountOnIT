@@ -12,14 +12,21 @@ public partial class ProductListView : ContentView
 		InitializeComponent();
 	}
 
+    //Change name
     private void Button_Clicked(object sender, EventArgs e)
     {
 
-        // Opret en ny instans af det nye view
         var newView = new ProductView();
 
-        // Erstat det nuværende view med det nye view
         Content = newView;
     }
-    
+
+    private void Go_To_Shoppingcart(object sender, TappedEventArgs e)
+    {
+        //This one have to be changed. I'll need this snippet more than onec, therefore I'll need a mothode that I insted will call here
+        //AndExpandLayoutManager that methode should perhaps be in af class called "Navigation" Lets see if I get to do it. 
+        var newView = new ShoppingCartView();
+
+        Content = newView;
+    }
 }
