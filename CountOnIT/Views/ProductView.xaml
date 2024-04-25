@@ -7,8 +7,9 @@
         
             <StackLayout Orientation="Horizontal">
 
-            <Label Text="Tilbage"
-                   Margin="20"/>
+            <Image Source="arrowleft.png"
+                   HeightRequest="30"
+                   Margin="20,0,30,120"/>
 
             <Image Source="ikon1.png"
                        Margin="20,0,70,0"
