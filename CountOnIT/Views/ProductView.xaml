@@ -4,20 +4,30 @@
              x:Class="CountOnIT.Views.ProductView">
     <VerticalStackLayout>
 
-        <Grid >     
+        
+            <StackLayout Orientation="Horizontal">
+
+            <Label Text="Tilbage"
+                   Margin="20"/>
+
             <Image Source="ikon1.png"
-                   Margin="70"/>
-            
-        </Grid>
+                       Margin="20,0,70,0"
+                       HeightRequest="200"/>
+                
+                <Image Source="shoppingbasket.svg"
+                       Margin="0,-150,0,0"
+                       HeightRequest="30"/>
+            </StackLayout>
+                
 
         <StackLayout BackgroundColor="#f2f2f2">
                 <Label Text="Produktnavn"
-                       Margin="20,20,0,0"
+                       Margin="40,20,0,0"
                        FontSize="20"/>
                 <Label Text="Antal på lager: 201stk."
-                       Margin="20,40,0,0"/>
+                       Margin="40,40,0,0"/>
 
-                <HorizontalStackLayout Margin="20">
+                <HorizontalStackLayout Margin="40">
                     <Button Text="-"/>
                     <Label Text="0"
                            Margin="10"
@@ -25,8 +35,8 @@
                     <Button Text="+"/>
                 </HorizontalStackLayout>
                 <Button Text="Læg i Kurv"
-                        Margin="20,10,200,0"/>
-            <Label Text="Detaljer  V" Margin="20,60,0,5000"/>
+                        Margin="40,10,200,0"/>
+            <Label Text="Detaljer  V" Margin="40,60,0,5000"/>
         </StackLayout>
 
     </VerticalStackLayout>
