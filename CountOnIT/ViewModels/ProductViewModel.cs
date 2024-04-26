@@ -14,7 +14,7 @@ namespace CountOnIT.ViewModels
 
         public ProductViewModel()
         {
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "img"));
+            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
         }
 
         public List<ProductModel> StudentsCollection

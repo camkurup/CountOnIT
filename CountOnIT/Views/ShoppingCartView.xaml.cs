@@ -7,6 +7,7 @@ public partial class ShoppingCartView : ContentView
 		InitializeComponent();
 	}
 
+    // should call method from NavigationController
     private void Go_Back_tapped(object sender, TappedEventArgs e)
     {
         var newView = new ProductListView();

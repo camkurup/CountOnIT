@@ -17,10 +17,9 @@
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Go_To_Shoppingcart"/>
                     </Image.GestureRecognizers>
-                    
+
                 </Image>
 
-                
             </StackLayout>
             
             <Grid>
