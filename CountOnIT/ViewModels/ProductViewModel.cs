@@ -10,17 +10,6 @@ namespace CountOnIT.ViewModels
 {
     public class ProductViewModel
     {
-        private List<ProductModel> productCollection = new List<ProductModel>();
 
-        public ProductViewModel()
-        {
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
-        }
-
-        public List<ProductModel> StudentsCollection
-        {
-            get { return productCollection; }
-            set { productCollection = value; }
-        }
     }
 }
