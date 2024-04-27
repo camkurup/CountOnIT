@@ -21,100 +21,70 @@
                 </Image>
 
             </StackLayout>
-            
             <Grid>
+                <!-- Definer rækker og kolonner -->
                 <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Row="0" Grid.Column="0" Margin="20">
-                    <StackLayout>
+                <!-- CollectionView til visning af produkter -->
+                <CollectionView x:Name="ProductCollectionView" Grid.Row="1" Grid.ColumnSpan="2">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="0"
+                      Margin="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
 
-                        <Image Source="ikon2.png">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="Button_Clicked" />
-                            </Image.GestureRecognizers>
-                        </Image>
-                        <Label Text="Produktnavn" Margin="10"/> 
-                        
-                            <!-- Knappen til at skifte mellem views -->
-                            <Button Text="Skift View" Clicked="Button_Clicked" />
+                                <!-- Billede -->
+                                <Image Source="{Binding Img}" 
+                           Grid.Row="0" 
+                           Grid.ColumnSpan="2" 
+                           Aspect="AspectFill" 
+                           HeightRequest="100"
+                           WidthRequest="70"
+                           Margin="0,20,0,0">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Go_To_Product" />
+                                    </Image.GestureRecognizers>
+                                </Image>
 
-                           
-                    </StackLayout>
+                                <!-- Produktnavn -->
+                                <Label Text="{Binding Name}" 
+                           Grid.Row="1" 
+                           Grid.ColumnSpan="2" 
+                           Margin="40,0,0,0" 
+                           FontSize="18" />
 
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="1" Margin="20">
-                    <StackLayout>
-
-                        <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
-                        <Button Text="Læg i kurv"/>
-
-                    </StackLayout>
-
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="0" Margin="20">
-                    <StackLayout>
-
-                        <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
-                        <Button Text="Læg i kurv"/>
-
-                    </StackLayout>
-
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="1" Margin="20">
-                    <StackLayout>
-
-                        <Image Source="ikon2.png"/>
-                        <Label 
-                            Text="Produktnavn" 
-                            Margin="10"/>
-                        <Button Text="Læg i kurv"/>
-
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="0" Margin="20">
-                    <StackLayout>
-
-                        <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
-                        <Button Text="Læg i kurv"/>
-
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="1" Margin="20">
-                    <StackLayout>
-
-                        <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
-                        <Button Text="Læg i kurv"/>
-
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="3" Grid.Column="0" Margin="20">
-                    <StackLayout>
-
-                        <Image Source="ikon2.png"/>
-                        <Label Text="Produktnavn" Margin="10"/>
-                        <Button Text="Læg i kurv"/>
-
-                    </StackLayout>
-                </Grid>
+                                <!-- Læg i kurv knap -->
+                                <Button Text="Læg i kurv" 
+                            Grid.Row="3" 
+                            Grid.Column="0" 
+                            Margin="15,10,10,0" 
+                            HorizontalOptions="Center"
+                            Padding="30,0,30,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </Grid>
-        
-    </VerticalStackLayout>
+
+
+        </VerticalStackLayout>
     </ScrollView>
 </ContentView>

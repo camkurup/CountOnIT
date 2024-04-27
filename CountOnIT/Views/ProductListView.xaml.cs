@@ -6,19 +6,15 @@ namespace CountOnIT.Views;
 
 public partial class ProductListView : ContentView
 {
+    private ProductListViewModel productsListViewModel;
 
     public ProductListView()
 	{
 		InitializeComponent();
-	}
+        productsListViewModel = new ProductListViewModel();
 
-    //Change name
-    private void Button_Clicked(object sender, EventArgs e)
-    {
+        ProductCollectionView.ItemsSource = productsListViewModel.ProductsCollection;
 
-        var newView = new ProductView();
-
-        Content = newView;
     }
 
     private void Go_To_Shoppingcart(object sender, TappedEventArgs e)
@@ -28,5 +24,13 @@ public partial class ProductListView : ContentView
         var newView = new ShoppingCartView();
 
         Content = newView;
+    }
+
+    private void Go_To_Product(object sender, TappedEventArgs e)
+    {
+        var newView = new ProductView();
+
+        Content = newView;
+
     }
 }
