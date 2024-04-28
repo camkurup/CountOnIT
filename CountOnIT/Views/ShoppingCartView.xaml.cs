@@ -1,4 +1,3 @@
-using CountOnIT.ViewModels;
 
 namespace CountOnIT.Views;
 
@@ -17,10 +16,5 @@ public partial class ShoppingCartView : ContentView
         var newView = new ProductListView();
 
         Content = newView;
-    }
-
-    private void Image_Tapped(object sender, TappedEventArgs e)
-    {
-
     }
 }

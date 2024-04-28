@@ -14,17 +14,6 @@ namespace CountOnIT
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
             UIApplication.Main(args, null, typeof(AppDelegate));
-
-            var mauiApp = MauiProgram.CreateMauiApp();
-
-            mauiApp.OnMauiContextCreated((context) =>
-            {
-                // Definér ønsket vinduesstørrelse
-                var window = context.MauiContext.Window;
-                window.SetSize(new Microsoft.Maui.Graphics.Size(800, 600));
-            });
-
-            return mauiApp.Run();
         }
     }
 }

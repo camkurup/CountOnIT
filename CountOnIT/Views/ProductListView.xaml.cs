@@ -1,20 +1,20 @@
-
 using CountOnIT.Models;
-using CountOnIT.ViewModels;
+using CountOnIT.Data;
 
 namespace CountOnIT.Views;
 
 public partial class ProductListView : ContentView
 {
-    private ProductListViewModel productsListViewModel;
-
+    public List<ProductModel> Products { get; set; }
     public ProductListView()
 	{
 		InitializeComponent();
-        productsListViewModel = new ProductListViewModel();
 
-        ProductCollectionView.ItemsSource = productsListViewModel.ProductsCollection;
+        // Opret en instans af DataAccess-klassen
+        DataAccess dataAccess = new DataAccess();
 
+        // Hent produkter ved at kalde GetProducts-metoden fra DataAccess-klassen
+        Products = dataAccess.GetProduct();
     }
 
     private void Go_To_Shoppingcart(object sender, TappedEventArgs e)

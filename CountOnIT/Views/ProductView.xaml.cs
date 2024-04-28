@@ -1,5 +1,3 @@
-using CountOnIT.Controllers;
-
 namespace CountOnIT.Views;
 
 public partial class ProductView : ContentView
