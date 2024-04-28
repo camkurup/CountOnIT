@@ -13,7 +13,7 @@ namespace CountOnIT.Data
 
             NpgsqlConnection con = new NpgsqlConnection(connectionString);
             con.Open();
-
+            //Koden når ikke længere end her til. Jeg formoder at det er forbindelsen mellem projekt og db som fejler. 
             string query = "SELECT * FROM PRODUCT;";
 
             NpgsqlCommand cmd = new NpgsqlCommand(query, con);
