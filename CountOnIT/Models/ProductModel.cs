@@ -1,29 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SQLite;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+using String = System.String;
 
 namespace CountOnIT.Models
 {
-    public class ProductModel
+    public class ProductModel : INotifyPropertyChanged
     {
+        #region Fields
 
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Img { get; set; }
+        public int id;
+        private string name;
+        private string description;
+        private string image;
 
-        public ProductModel(int id, string name, string description, string img)
+        #endregion
+
+        [PrimaryKey, AutoIncrement]
+        [Display(AutoGenerateField = false)]
+        public int ID { get; set; }
+        public string Name
         {
-            Id = id;
-            Name = name;
-            Description = description;
-            Img = img;
+            get { return name; }
+            set
+            {
+                name = value;
+                RaisePropertyChanged("Name");
+            }
         }
 
-        public ProductModel()
+        public string Description
         {
+            get { return description; }
+            set
+            {
+                description = value;
+                RaisePropertyChanged("Description");
+            }
         }
+
+        [Display(AutoGenerateField = false)]
+        public string Image
+        {
+            get { return image; }
+            set
+            {
+                image = value;
+                RaisePropertyChanged("Image");
+            }
+        }
+
+        #region InotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RaisePropertyChanged(String name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+
+        #endregion
+
     }
 }

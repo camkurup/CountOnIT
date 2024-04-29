@@ -17,12 +17,12 @@ namespace CountOnIT.ViewModels
         //This list is statik. It should be handled dynamic with data from my database
         public ProductListViewModel()
         {
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
-            productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
+            //productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
+            //productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
+            //productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
+            //productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
+            //productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
+            //productCollection.Add(new ProductModel(1, "Skruer", "description", "ikon1.png"));
         }
 
         public List<ProductModel> ProductsCollection

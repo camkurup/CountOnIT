@@ -61,6 +61,10 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.18" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.18" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="SQLite" Version="3.13.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
+		<PackageReference Include="System.ObjectModel" Version="4.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
