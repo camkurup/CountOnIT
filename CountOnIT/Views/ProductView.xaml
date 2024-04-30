@@ -16,11 +16,11 @@
             </Image>
 
             <Image Source="ikon1.png"
-                       Margin="20,0,50,0"
+                       Margin="8,0,50,0"
                        HeightRequest="200"/>
 
             <Image Source="shoppingbasket.svg"
-                       Margin="0,0,0,120"
+                       Margin="0,0,0,130"
                        HeightRequest="30">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Go_To_Shoppingcart"/>
