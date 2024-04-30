@@ -4,7 +4,9 @@ namespace CountOnIT.Views;
 
 public partial class ProductView : ContentView
 {
-	public ProductView()
+    int count = 0;
+
+    public ProductView()
 	{
 		InitializeComponent();
 	}
@@ -27,5 +29,29 @@ public partial class ProductView : ContentView
         var newView = new ShoppingCartView();
 
         Content = newView;
+    }
+
+    private void Button_Clicked_Add(object sender, EventArgs e)
+    {
+        count++;
+
+        if (count == 1)
+            CountUp.Text = $"{count} ";
+        else
+            CountUp.Text = $" {count} ";
+
+        SemanticScreenReader.Announce(CountUp.Text);
+    }
+
+    private void Button_Clicked_Subtracked(object sender, EventArgs e)
+    {
+        count--;
+
+        if (count > -1)
+            CountUp.Text = $"{count} ";
+        if (count < 0)
+            count = 0;
+
+        SemanticScreenReader.Announce(CountUp.Text);
     }
 }

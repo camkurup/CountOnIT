@@ -39,14 +39,18 @@
                        Margin="40,40,0,0"/>
 
                 <HorizontalStackLayout Margin="40">
-                    
-                    <Button Text="-"/>
-                    
-                    <Label Text="0"
+
+                <Button Text="-" 
+                        Clicked="Button_Clicked_Subtracked"/>
+
+                <Label x:Name="CountUp"
+                           Text="0"
                            Margin="10"
                            FontSize="20"/>
                     
-                    <Button Text="+"/>
+                    <Button  
+                           Text="+"
+                           Clicked="Button_Clicked_Add"/>
                     
                 </HorizontalStackLayout>
                 
