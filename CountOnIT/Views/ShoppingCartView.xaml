@@ -2,24 +2,68 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CountOnIT.Views.ShoppingCartView">
-    <VerticalStackLayout>
-        <StackLayout Orientation="Vertical">
+    <ScrollView Margin="20">
 
-            <Image Source="arrowleft.png"
-                   HeightRequest="30"
-                   Margin="-320,20,0,0">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Go_Back_tapped"/>
-                </Image.GestureRecognizers>
-            </Image>
+        <VerticalStackLayout>
+            <StackLayout Orientation="Vertical">
+                <Grid Margin="20">
 
-            <Label Text="Forbrugs Kurv"
+                    <Image Source="arrowleft.png"
+                       HeightRequest="30"
+                       Margin="0,0,0,0"
+                       HorizontalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Go_Back_tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="Forbrugs Kurv"
                    FontSize="30"
-                   Margin="20,20,0,0"/>
+                   Margin="0,0,0,0"
+                   HorizontalOptions="Center"/>
 
-            
+                </Grid>
+
+                <StackLayout>
+                    <!-- CollectionView til visning af produkter -->
+                    <CollectionView x:Name="ProductCollectionView" Grid.Row="1" Grid.ColumnSpan="1">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <HorizontalStackLayout>
+
+                                    <!-- Billede -->
+                                    <Image Source="{Binding Img}" 
+                                       HorizontalOptions="Start"
+                                       HeightRequest="100"
+                                       WidthRequest="70"
+                                       Margin="0,0,0,0">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Go_To_Product" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <!-- Produktnavn -->
+                                    <Label Text="{Binding Name}"                                         
+                                       Margin="40,0,0,0" 
+                                       FontSize="18" />
 
 
-        </StackLayout>
-    </VerticalStackLayout>
+                                    <Label Text="{Binding CountOnStorage}"                                         
+                                           Margin="40,0,0,0" 
+                                           FontSize="18" />
+
+
+                                </HorizontalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </StackLayout>
+
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentView>

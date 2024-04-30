@@ -13,13 +13,15 @@ namespace CountOnIT.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Img { get; set; }
+        public int CountOnStage { get; set; }
 
-        public ProductModel(int id, string name, string description, string img)
+        public ProductModel(int id, string name, string description, string img, int countOnStage)
         {
             Id = id;
             Name = name;
             Description = description;
             Img = img;
+            CountOnStage = countOnStage;
         }
 
         public ProductModel()
