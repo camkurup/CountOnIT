@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CountOnIT.Views.ProductView">
+             x:Class="CountOnIT.Views.ProductView"
+             x:Name="ContentView">
     <VerticalStackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -16,7 +17,7 @@
             </Image>
 
                 <!--Jeg skal have mit produkt til at vise præcis det produkt som der blev klikket på.-->
-            <Image Source="{Binding Img}"
+            <Image Source="{Binding ImageName}"
                    Margin="8,0,50,0"
                    HeightRequest="200"/>
 
@@ -37,7 +38,7 @@
                 
             <Label Text="Stk. på lager:"
                     Margin="40,40,0,0"/>
-            <Label Text="{Binding CountOnStorage}"
+            <Label Text="{Binding CountInStorage}"
                     Margin="40,0,0,0"/>
 
             <HorizontalStackLayout Margin="40">

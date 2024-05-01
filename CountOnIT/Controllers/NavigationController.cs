@@ -24,8 +24,8 @@ namespace CountOnIT.Controllers
 
         private void GoBack(ContentView currentPage)
         {
-            var newView = new ProductListView(); 
-            
+            var newView = new ProductListView();
+
             newView.Content = newView;
         }
     }

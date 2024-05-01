@@ -53,7 +53,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <!-- Billede -->
-                                <Image Source="{Binding Img}" 
+                                <Image Source="{Binding ImageName}" 
                                        Grid.Row="0" 
                                        Grid.ColumnSpan="2" 
                                        Aspect="AspectFill" 

@@ -12,7 +12,7 @@ namespace CountOnIT
     {
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
 
-        public DbSet<ProductModel> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
     }
 }

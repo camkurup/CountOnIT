@@ -1,4 +1,5 @@
 using CountOnIT.Controllers;
+using CountOnIT.ViewModels;
 
 namespace CountOnIT.Views;
 
@@ -6,9 +7,12 @@ public partial class ProductView : ContentView
 {
     int count = 0;
 
-    public ProductView()
+    public ProductView(ProductViewModel viewModel)
 	{
 		InitializeComponent();
+
+        ContentView.BindingContext = viewModel;
+
 	}
 
     // should call method from NavigationController

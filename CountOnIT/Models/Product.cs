@@ -6,26 +6,23 @@ using System.Threading.Tasks;
 
 namespace CountOnIT.Models
 {
-    public class ProductModel
+    public class Product
     {
 
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Img { get; set; }
-        public int CountOnStage { get; set; }
+        public string ImageName { get; set; }
+        public int CountInStorage { get; set; }
 
-        public ProductModel(int id, string name, string description, string img, int countOnStage)
+        public Product(int id, string name, string description, string imageName, int countInStorage)
         {
             Id = id;
             Name = name;
             Description = description;
-            Img = img;
-            CountOnStage = countOnStage;
+            ImageName = imageName;
+            CountInStorage = countInStorage;
         }
 
-        public ProductModel()
-        {
-        }
     }
 }

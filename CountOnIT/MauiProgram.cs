@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CountOnIT.Interfaces;
+using CountOnIT.Services;
+using Microsoft.Extensions.Logging;
 
 namespace CountOnIT
 {
@@ -14,6 +16,8 @@ namespace CountOnIT
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            builder.Services.AddSingleton<IShoppingService>(new ShoppingServiceMock());
 
 #if DEBUG
     		builder.Logging.AddDebug();

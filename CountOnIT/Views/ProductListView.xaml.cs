@@ -1,19 +1,26 @@
 
+using CountOnIT.Interfaces;
 using CountOnIT.Models;
+using CountOnIT.Services;
 using CountOnIT.ViewModels;
 
 namespace CountOnIT.Views;
 
 public partial class ProductListView : ContentView
 {
-    private ProductListViewModel productsListViewModel;
+    private readonly ProductListViewModel viewModel;
 
-    public ProductListView()
+    public ProductListView(/*IShoppingService shoppingService*/)
 	{
 		InitializeComponent();
-        productsListViewModel = new ProductListViewModel();
 
-        ProductCollectionView.ItemsSource = productsListViewModel.ProductsCollection;
+
+        IShoppingService shoppingService = new ShoppingServiceMock();
+        var products = shoppingService.GetProducts();
+
+        viewModel = new ProductListViewModel(products);
+
+        ProductCollectionView.ItemsSource = viewModel.Products;
 
     }
 
