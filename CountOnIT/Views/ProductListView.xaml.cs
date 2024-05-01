@@ -26,6 +26,8 @@ public partial class ProductListView : ContentView
         Content = newView;
     }
 
+    //Kan jeg måske i denne methode gemme det produkt ned i en streng som der er klikket på og bære dette specifikke produkt med over på produktsiden ? 
+    // Hov, så tænkte jeg lige: Jeg brude vel konne kalde et specifikt produkt i stedet for at gå til et deafult produkt view... eller hvaqd ? 
     private void Go_To_Product(object sender, TappedEventArgs e)
     {
         var newView = new ProductView();

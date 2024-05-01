@@ -36,11 +36,11 @@ public partial class ProductView : ContentView
         count++;
 
         if (count == 1)
-            CountUp.Text = $"{count} ";
+            CartItemCount.Text = $"{count} ";
         else
-            CountUp.Text = $" {count} ";
+            CartItemCount.Text = $" {count} ";
 
-        SemanticScreenReader.Announce(CountUp.Text);
+        SemanticScreenReader.Announce(CartItemCount.Text);
     }
 
     private void Button_Clicked_Subtracked(object sender, EventArgs e)
@@ -48,10 +48,10 @@ public partial class ProductView : ContentView
         count--;
 
         if (count > -1)
-            CountUp.Text = $"{count} ";
+            CartItemCount.Text = $"{count} ";
         if (count < 0)
             count = 0;
 
-        SemanticScreenReader.Announce(CountUp.Text);
+        SemanticScreenReader.Announce(CartItemCount.Text);
     }
 }

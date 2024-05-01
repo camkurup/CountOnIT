@@ -26,6 +26,8 @@ public partial class ShoppingCartView : ContentView
 
     private void Go_To_Product(object sender, TappedEventArgs e)
     {
+        var newView = new ProductView();
 
+        Content = newView;
     }
 }

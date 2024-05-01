@@ -24,6 +24,7 @@
 
                 </Grid>
 
+                <!-- Denne liste skal ikke være en liste qaf tilgængelige produkter, men i stedet være en liste af de produkter som er lagt i kurv af brugeren-->
                 <StackLayout>
                     <!-- CollectionView til visning af produkter -->
                     <CollectionView x:Name="ProductCollectionView" Grid.Row="1" Grid.ColumnSpan="1">
@@ -48,13 +49,18 @@
                                     <!-- Produktnavn -->
                                     <Label Text="{Binding Name}"                                         
                                        Margin="40,0,0,0" 
-                                       FontSize="18" />
+                                       FontSize="18"        >
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Go_To_Product" />
+                                        </Label.GestureRecognizers>
 
+                                    </Label>
 
-                                    <Label Text="{Binding CountOnStorage}"                                         
+                                    <!-- Jeg må kunne hive fat i det valgte antal der er lagt i kurv og gemme dem på en eller anden måde-->
+                                    <!-- Stk. På lager -->
+                                    <Label Text="{Binding ItemInShoppingCart}"                                         
                                            Margin="40,0,0,0" 
                                            FontSize="18" />
-
 
                                 </HorizontalStackLayout>
                             </DataTemplate>

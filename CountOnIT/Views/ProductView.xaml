@@ -15,49 +15,51 @@
                 
             </Image>
 
-            <Image Source="ikon1.png"
-                       Margin="8,0,50,0"
-                       HeightRequest="200"/>
+                <!--Jeg skal have mit produkt til at vise præcis det produkt som der blev klikket på.-->
+            <Image Source="{Binding Img}"
+                   Margin="8,0,50,0"
+                   HeightRequest="200"/>
 
             <Image Source="shoppingbasket.svg"
-                       Margin="0,0,0,130"
-                       HeightRequest="30">
+                   Margin="0,0,0,130"
+                   HeightRequest="30">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Go_To_Shoppingcart"/>
                 </Image.GestureRecognizers>
             </Image>
             </StackLayout>
                 
-
         <StackLayout BackgroundColor="#f2f2f2">
-            
-                <Label Text="Produktnavn"
+
+            <Label Text="{Binding Name}"
                        Margin="40,20,0,0"
                        FontSize="20"/>
                 
-                <Label Text="Antal på lager: 201stk."
-                       Margin="40,40,0,0"/>
+            <Label Text="Stk. på lager:"
+                    Margin="40,40,0,0"/>
+            <Label Text="{Binding CountOnStorage}"
+                    Margin="40,0,0,0"/>
 
-                <HorizontalStackLayout Margin="40">
+            <HorizontalStackLayout Margin="40">
 
-                <Button Text="-" 
-                        Clicked="Button_Clicked_Subtracked"/>
+            <Button Text="-" 
+                    Clicked="Button_Clicked_Subtracked"/>
 
-                <Label x:Name="CountUp"
-                           Text="0"
-                           Margin="10"
-                           FontSize="20"/>
+            <Label x:Name="CartItemCount"
+                    Text="0"
+                    Margin="10"
+                    FontSize="20"/>
                     
-                    <Button  
-                           Text="+"
-                           Clicked="Button_Clicked_Add"/>
+            <Button Text="+"
+                    Clicked="Button_Clicked_Add"/>
                     
-                </HorizontalStackLayout>
+            </HorizontalStackLayout>
                 
-                <Button Text="Læg i Kurv"
-                        Margin="40,10,200,0"/>
-                
-            <Label Text="Detaljer  V" Margin="40,60,0,5000"/>
+            <Button Text="Læg i Kurv"
+                    Margin="40,10,200,0"/>
+
+            <Label Text="{Binding Description}" 
+                   Margin="40,60,0,5000"/>
                 
         </StackLayout>
 

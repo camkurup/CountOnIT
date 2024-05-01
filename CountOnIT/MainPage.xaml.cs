@@ -1,12 +1,17 @@
-﻿namespace CountOnIT
+﻿using CountOnIT.Data;
+
+namespace CountOnIT
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
 
-        public MainPage()
+        public MainPage(DataMock write, DataMock read)
         {
             InitializeComponent();
+            Console.WriteLine("KÆMPEE TEST");
+            write.Write();
+            read.Read();
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
