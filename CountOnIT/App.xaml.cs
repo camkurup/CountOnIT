@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace CountOnIT
+﻿namespace CountOnIT
 {
     public partial class App : Application
     {
@@ -9,8 +7,6 @@ namespace CountOnIT
             InitializeComponent();
 
             MainPage = new AppShell();
-
-            
         }
     }
 }

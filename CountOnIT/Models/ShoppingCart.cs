@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CountOnIT.Models
+﻿namespace CountOnIT.Models
 {
     public class ShoppingCart
     {
+        private readonly List<ShoppingCartItem> items = new List<ShoppingCartItem>();
 
-        public List<ShoppingCartItem> Items { get; set; }
+        public ShoppingCart()
+        {
+        }
 
+        public List<ShoppingCartItem> Items => items;
     }
 }

@@ -1,5 +1,8 @@
 ﻿using CountOnIT.Interfaces;
+using CountOnIT.Models;
 using CountOnIT.Services;
+using CountOnIT.ViewModels;
+using CountOnIT.Views;
 using Microsoft.Extensions.Logging;
 
 namespace CountOnIT
@@ -18,9 +21,11 @@ namespace CountOnIT
                 });
 
             builder.Services.AddSingleton<IShoppingService>(new ShoppingServiceMock());
+            builder.Services.AddSingleton(new ShoppingCartViewModel(new ShoppingCart()));
+            builder.Services.AddTransient<UsagePage>();
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

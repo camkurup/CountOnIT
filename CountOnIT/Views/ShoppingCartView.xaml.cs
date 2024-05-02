@@ -1,30 +1,14 @@
-using CountOnIT.ViewModels;
-
 namespace CountOnIT.Views;
 
 public partial class ShoppingCartView : ContentView
 {
-
     public ShoppingCartView()
-	{
-		InitializeComponent();
-
-
+    {
+        InitializeComponent();
     }
 
-    // should call method from NavigationController
-    private void Go_Back_tapped(object sender, TappedEventArgs e)
+    private void ItemTapped(object sender, EventArgs e)
     {
-        var newView = new ProductListView();
-
-        Content = newView;
-    }
-
-
-    private void Go_To_Product(object sender, TappedEventArgs e)
-    {
-        var newView = new ProductView();
-
-        Content = newView;
+        // TODO: Navigate to product details page
     }
 }

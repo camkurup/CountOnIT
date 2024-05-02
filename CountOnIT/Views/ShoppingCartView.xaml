@@ -1,75 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CountOnIT.Views.ShoppingCartView">
-    <ScrollView Margin="20">
+<ContentView 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CountOnIT.Views.ShoppingCartView">
 
-        <VerticalStackLayout>
-            <StackLayout Orientation="Vertical">
-                <Grid Margin="20">
+    <CollectionView ItemsSource="{Binding Items}">
+        <!--<CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical"/>
+        </CollectionView.ItemsLayout>-->
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <HorizontalStackLayout>
 
-                    <Image Source="arrowleft.png"
-                       HeightRequest="30"
-                       Margin="0,0,0,0"
-                       HorizontalOptions="Start">
+                    <Image 
+                        Source="{Binding ImageUrl}"
+                        HorizontalOptions="Start"
+                        HeightRequest="100"
+                        WidthRequest="70"
+                        Margin="0,0,0,0">
                         <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Go_Back_tapped"/>
+                            <TapGestureRecognizer Tapped="ItemTapped" />
                         </Image.GestureRecognizers>
                     </Image>
 
-                    <Label Text="Forbrugs Kurv"
-                   FontSize="30"
-                   Margin="0,0,0,0"
-                   HorizontalOptions="Center"/>
+                    <Label 
+                        Text="{Binding ProductName}"                                         
+                        Margin="40,0,0,0" 
+                        FontSize="18">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ItemTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
 
-                </Grid>
+                    <Label 
+                        Text="{Binding Quantity}"                                         
+                        Margin="40,0,0,0" 
+                        FontSize="18" />
 
-                <!-- Denne liste skal ikke være en liste qaf tilgængelige produkter, men i stedet være en liste af de produkter som er lagt i kurv af brugeren-->
-                <StackLayout>
-                    <!-- CollectionView til visning af produkter -->
-                    <CollectionView x:Name="ProductCollectionView" Grid.Row="1" Grid.ColumnSpan="1">
-                        <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="1" />
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 
-                                    <!-- Billede -->
-                                    <Image Source="{Binding Img}" 
-                                       HorizontalOptions="Start"
-                                       HeightRequest="100"
-                                       WidthRequest="70"
-                                       Margin="0,0,0,0">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="Go_To_Product" />
-                                        </Image.GestureRecognizers>
-                                    </Image>
-
-                                    <!-- Produktnavn -->
-                                    <Label Text="{Binding Name}"                                         
-                                       Margin="40,0,0,0" 
-                                       FontSize="18"        >
-                                        <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="Go_To_Product" />
-                                        </Label.GestureRecognizers>
-
-                                    </Label>
-
-                                    <!-- Jeg må kunne hive fat i det valgte antal der er lagt i kurv og gemme dem på en eller anden måde-->
-                                    <!-- Stk. På lager -->
-                                    <Label Text="{Binding ItemInShoppingCart}"                                         
-                                           Margin="40,0,0,0" 
-                                           FontSize="18" />
-
-                                </HorizontalStackLayout>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
-
-                </StackLayout>
-
-            </StackLayout>
-        </VerticalStackLayout>
-    </ScrollView>
 </ContentView>

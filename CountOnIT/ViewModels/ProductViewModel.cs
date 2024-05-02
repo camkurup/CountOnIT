@@ -1,24 +1,16 @@
 ﻿using CountOnIT.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CountOnIT.ViewModels
 {
-    public class ProductViewModel
+    public class ProductViewModel : ViewModelBase<Product>
     {
-        private readonly Product model;
-
-        public ProductViewModel(Product model) 
+        public ProductViewModel(Product model) : base(model)
         {
-            this.model = model;
-
         }
 
-        public string Name => model.Name;
-        public string Description => model.Description;
-        public string ImageName => model.ImageName;
+        public string Name => Model.Name;
+        public string Description => Model.Description;
+        public string ImageUrl => Model.ImageUrl;
+        public int StockQuantity => Model.StockQuantity;
     }
 }
