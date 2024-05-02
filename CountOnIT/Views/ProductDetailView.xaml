@@ -9,7 +9,7 @@
         <StackLayout Orientation="Horizontal">
             <Image 
                 Source="{Binding ImageUrl}"
-                Margin="8,0,50,0"
+                Margin="70,0,50,0"
                 HeightRequest="200"/>
 
             <Image 
