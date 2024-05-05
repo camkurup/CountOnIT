@@ -8,15 +8,6 @@
     <ScrollView Margin="20">
         <VerticalStackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Produktliste" FontSize="30" Margin="20,0,0,0"/>
-                <Image Source="shoppingbasket.svg" Margin="80,0,0,0" HeightRequest="30">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="GoTo_ShoppingCart"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </StackLayout>
-
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />

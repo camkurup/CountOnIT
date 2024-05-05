@@ -7,11 +7,11 @@
     <CollectionView ItemsSource="{Binding Items}">
         <!--<CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical"/>
-        </CollectionView.ItemsLayout>-->
+        </CollectionView.ItemsLayout>-->           
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <HorizontalStackLayout>
-
+                    <Label Text="test"/>
                     <Image 
                         Source="{Binding ImageUrl}"
                         HorizontalOptions="Start"

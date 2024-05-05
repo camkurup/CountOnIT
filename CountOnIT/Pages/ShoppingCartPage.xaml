@@ -6,5 +6,9 @@
     x:Class="CountOnIT.Pages.ShoppingCartPage">
 
     <views:ShoppingCartView/>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="kurv"
+             IconImageSource="shoppingbasket.svg" />
+    </ContentPage.ToolbarItems>
 
 </ContentPage>

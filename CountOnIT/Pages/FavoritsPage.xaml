@@ -8,4 +8,8 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="kurv"
+             IconImageSource="shoppingbasket.svg" />
+    </ContentPage.ToolbarItems>
 </ContentPage>

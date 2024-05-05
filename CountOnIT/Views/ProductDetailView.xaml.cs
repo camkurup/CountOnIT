@@ -1,3 +1,6 @@
+using CountOnIT.Pages;
+using CountOnIT.ViewModels;
+
 namespace CountOnIT.Views;
 
 public partial class ProductDetailsView : ContentView
@@ -7,10 +10,6 @@ public partial class ProductDetailsView : ContentView
     public ProductDetailsView()
     {
         InitializeComponent();
-    }
-
-    private void GoToShoppingCart(object sender, TappedEventArgs e)
-    {
     }
 
     private void AddButton_Clicked(object sender, EventArgs e)
@@ -35,5 +34,11 @@ public partial class ProductDetailsView : ContentView
             count = 0;
 
         SemanticScreenReader.Announce(CartItemCount.Text);
+    }
+    public ShoppingCartViewModel ViewModel => BindingContext as ShoppingCartViewModel;
+
+    private async void Go_To_ShoppingCart(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new ShoppingCartPage(ViewModel));
     }
 }
