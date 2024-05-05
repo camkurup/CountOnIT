@@ -8,4 +8,9 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="kurv"
+             IconImageSource="pngaaa.png" />
+    </ContentPage.ToolbarItems>
 </ContentPage>

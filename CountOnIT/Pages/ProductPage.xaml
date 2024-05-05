@@ -6,5 +6,8 @@
     x:Class="CountOnIT.Pages.ProductPage">
 
     <views:ProductDetailsView/>
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="kurv"
+             IconImageSource="pngaaa.png" />
+    </ContentPage.ToolbarItems>
 </ContentPage>

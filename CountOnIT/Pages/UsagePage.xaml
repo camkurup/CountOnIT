@@ -6,5 +6,9 @@
     xmlns:views="clr-namespace:CountOnIT.Views;assembly=CountOnIT">
 
     <views:ProductListView x:Name="listView"/>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="kurv"
+                     IconImageSource="pngaaa.png" />
 
+    </ContentPage.ToolbarItems>
 </ContentPage>

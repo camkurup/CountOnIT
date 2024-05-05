@@ -29,8 +29,7 @@
         <Label 
             Text="{Binding Name}" 
             Grid.Row="1" 
-            Margin="40,0,0,0" 
-            FontSize="18">
+            Margin="40,0,0,0">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Item_Tapped"/>
             </Label.GestureRecognizers>

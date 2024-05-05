@@ -6,14 +6,21 @@
     xmlns:local="clr-namespace:CountOnIT"
     xmlns:views="clr-namespace:CountOnIT.Views">
 
+    
     <TabBar>
         <ShellContent Icon="usage.svg"
+                      Title="Forbrug"
                      ContentTemplate="{DataTemplate views:UsagePage}" />
         <ShellContent Icon="shoppingbasket.svg"
+                      Title="Bestil"
                      ContentTemplate="{DataTemplate views:OrderingPage}" />
-        <ShellContent Icon="favorits.svg"
+        <ShellContent Icon="favorits.png"
+                      Title="Favoritter"
                      ContentTemplate="{DataTemplate views:FavoritsPage}" />
         <ShellContent Icon="profile.svg"
+                      Title="Profil"
                      ContentTemplate="{DataTemplate views:ProfilePage}" />
     </TabBar>
+    
+
 </Shell>

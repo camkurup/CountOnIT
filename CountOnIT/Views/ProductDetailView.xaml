@@ -9,17 +9,8 @@
         <StackLayout Orientation="Horizontal">
             <Image 
                 Source="{Binding ImageUrl}"
-                Margin="70,0,50,0"
+                Margin="100,0,50,0"
                 HeightRequest="200"/>
-
-            <Image 
-                Source="shoppingbasket.svg"
-                Margin="0,0,0,130"
-                HeightRequest="30">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="GoToShoppingCart"/>
-                </Image.GestureRecognizers>
-            </Image>
         </StackLayout>
 
         <StackLayout BackgroundColor="#f2f2f2">
