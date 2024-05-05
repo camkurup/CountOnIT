@@ -8,6 +8,6 @@
     <views:ProductDetailsView/>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="kurv"
-             IconImageSource="shoppingbasket.jpg" />
+             IconImageSource="pngaaa.png" />
     </ContentPage.ToolbarItems>
 </ContentPage>

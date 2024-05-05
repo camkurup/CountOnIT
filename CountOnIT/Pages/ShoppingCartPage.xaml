@@ -8,7 +8,6 @@
     <views:ShoppingCartView/>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="kurv"
-             IconImageSource="shoppingbasket.svg" />
     </ContentPage.ToolbarItems>
 
 </ContentPage>

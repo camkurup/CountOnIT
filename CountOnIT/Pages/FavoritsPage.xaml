@@ -10,6 +10,6 @@
     </VerticalStackLayout>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="kurv"
-             IconImageSource="shoppingbasket.svg" />
+             IconImageSource="pngaaa.png" />
     </ContentPage.ToolbarItems>
 </ContentPage>
