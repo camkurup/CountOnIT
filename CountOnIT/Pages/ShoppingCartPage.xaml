@@ -7,7 +7,7 @@
 
     <views:ShoppingCartView/>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="kurv"
+        <ToolbarItem Text="kurv"/>
     </ContentPage.ToolbarItems>
 
 </ContentPage>
